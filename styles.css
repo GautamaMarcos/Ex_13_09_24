@@ -1,0 +1,103 @@
+/* Navbar Horizontal com Flexbox */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+}
+
+/* Card de Perfil Centralizado na Tela usando Flexbox */
+.card-perfil-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.card-perfil {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 10px 8px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.perfil-image {
+    width: 50px;
+    border-radius: 50%;
+}
+
+/* Galeria de Imagens Responsiva usando Grid */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+
+.gallery-item img {
+    width: 100%; /* garante que a imagem ocupe toda a largura do container.*/
+    height: auto; /* Mantém a proporção original da imagem */
+    object-fit: cover; /*garante que a imagem cubra completamente o container, mesmo que parte dela seja cortada.*/
+}
+
+/* Layout de Página com Cabeçalho, Sidebar, Conteúdo Principal e Rodapé usando Grid */
+.layout-container {
+    display: grid;
+    grid-template-areas:  
+        "header header"
+        "sidebar main"
+        "footer footer";
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    gap: 10px;
+    height: 50vh;
+}
+
+header {
+    grid-area: header;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+aside {
+    grid-area: sidebar;
+    background-color: rgb(231, 205, 167);
+    padding: 10px;
+}
+
+main {
+    grid-area: main;
+    background-color:  burlywood;
+    padding: 10px;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
